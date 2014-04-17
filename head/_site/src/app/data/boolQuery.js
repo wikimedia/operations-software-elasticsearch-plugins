@@ -20,6 +20,9 @@
 			};
 			this.defaultClause = this.addClause();
 		},
+		setSize: function(size) {
+			this.search.size = parseInt( size, 10 );
+		},
 		setPage: function(page) {
 			this.search.from = this.config.size * (page - 1) + 1;
 		},
@@ -51,6 +54,12 @@
 			} else if(op === "query_string") {
 				query["default_field"] = field;
 				query["query"] = value;
+			} else if(op === "missing") {
+				op = "constant_score"
+				var missing = {}, filter = {};
+				missing["field"] = field;
+				filter["missing"] = missing
+				query["filter"] = filter;
 			} else {
 				query[field] = value;
 			}

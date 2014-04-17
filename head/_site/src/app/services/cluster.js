@@ -7,9 +7,12 @@
 		defaults: {
 			base_uri: "http://localhost:9200/"
 		},
+		init: function() {
+			this.base_uri = this.config.base_uri;
+		},
 		request: function( params ) {
-			return $.ajax( acx.extend({
-				url: this.config.base_uri + params.path,
+			return $.ajax( $.extend({
+				url: this.base_uri + params.path,
 				dataType: "json",
 				error: function(xhr, type, message) {
 					if("console" in window) {

@@ -3,41 +3,50 @@
 	var ui = app.ns("ui");
 	var data = app.ns("data");
 
-	var StructuredQuery = ui.AbstractQuery.extend({
+	var StructuredQuery = ui.AbstractWidget.extend({
 		defaults: {
 			cluster: null  // (required) instanceof app.services.Cluster
 		},
+		_baseCls: "uiStructuredQuery",
 		init: function(parent) {
 			this._super();
 			this.selector = new ui.IndexSelector({
 				onIndexChanged: this._indexChanged_handler,
-				base_uri: this.config.base_uri
+				cluster: this.config.cluster
 			});
 			this.el = $(this._main_template());
 			this.out = this.el.find("DIV.uiStructuredQuery-out");
 			this.attach( parent );
 		},
 		
-		_indexChanged_handler: function(index) {
+		_indexChanged_handler: function( index ) {
 			this.filter && this.filter.remove();
 			this.filter = new ui.FilterBrowser({
 				cluster: this.config.cluster,
-				base_uri: this.config.base_uri,
 				index: index,
-				onStaringSearch: function() { this.el.find("DIV.uiStructuredQuery-out").text( i18n.text("General.Searching") ); this.el.find("DIV.uiStructuredQuery-src").hide(); }.bind(this),
+				onStartingSearch: function() { this.el.find("DIV.uiStructuredQuery-out").text( i18n.text("General.Searching") ); this.el.find("DIV.uiStructuredQuery-src").hide(); }.bind(this),
 				onSearchSource: this._searchSource_handler,
-				onJsonResults: this._jsonResults_handler,
-				onTableResults: this._tableResults_handler
+				onResults: this._results_handler
 			});
 			this.el.find(".uiStructuredQuery-body").append(this.filter);
 		},
 		
-		_jsonResults_handler: function(results) {
+		_results_handler: function( filter, event ) {
+			var typeMap = {
+				"json": this._jsonResults_handler,
+				"table": this._tableResults_handler,
+				"csv": this._csvResults_handler
+			};
+			typeMap[ event.type ].call( this, event.data, event.metadata );
+		},
+		_jsonResults_handler: function( results ) {
 			this.el.find("DIV.uiStructuredQuery-out").empty().append( new ui.JsonPretty({ obj: results }));
 		},
-		
-		_tableResults_handler: function(results, metadata) {
-			// hack up a QueryDataSourceInterface so that StructuredQuery keeps working without using an es.Query object
+		_csvResults_handler: function( results ) {
+			this.el.find("DIV.uiStructuredQuery-out").empty().append( new ui.CSVTable({ results: results }));
+		},
+		_tableResults_handler: function( results, metadata ) {
+			// hack up a QueryDataSourceInterface so that StructuredQuery keeps working without using a Query object
 			var qdi = new data.QueryDataSourceInterface({ metadata: metadata, query: new data.Query() });
 			var tab = new ui.Table( {
 				store: qdi,
@@ -67,7 +76,7 @@
 		},
 		
 		_main_template: function() {
-			return { tag: "DIV", children: [
+			return { tag: "DIV", cls: this._baseCls, children: [
 				this.selector,
 				{ tag: "DIV", cls: "uiStructuredQuery-body" },
 				{ tag: "DIV", cls: "uiStructuredQuery-src", css: { display: "none" } },

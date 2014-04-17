@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>ElasticSearch UI Demo</title>
+		<title>Elasticsearch UI Demo</title>
 		<link rel="stylesheet" href="../dist/base/reset.css">
 		<link rel="stylesheet" href="../dist/app.css">
 		<script src="../dist/i18n.js" data-baseDir="../dist/lang" data-langs="en,fr"></script>
@@ -17,6 +17,13 @@
 				var script0 = document.getElementsByTagName('script')[0];
 				var s = document.createElement("script");
 				s.src = '../src/' + args['demo'];
+				s.onload = function() {
+					$("body").append(
+						{ tag: "DIV", children: [
+							window.builder()
+						] }
+					);
+				}
 				script0.parentNode.insertBefore(s, script0);
 				document.title = args['demo'].match(/([^\/]+)(\.js)$/)[1]
 			} );

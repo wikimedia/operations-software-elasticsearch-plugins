@@ -2,24 +2,25 @@
 
 	var ui = app.ns("ui");
 
-	ui.IndexSelector = app.ui.AbstractQuery.extend({
+	ui.IndexSelector = ui.AbstractWidget.extend({
 		init: function(parent) {
 			this._super();
 			this.el = $(this._main_template());
 			this.attach( parent );
+			this.cluster = this.config.cluster;
 			this.update();
 		},
 		update: function() {
-			this._request_handler({
-				type: "GET",
-				path: "_status",
-				success: this._update_handler
-			});
+			this.cluster.get( "_status", this._update_handler );
 		},
 		
 		_update_handler: function(data) {
 			var options = [];
-			for(var name in data.indices) { options.push(this._option_template(name, data.indices[name])); }
+			var index_names = Object.keys(data.indices).sort();
+			for(var i=0; i < index_names.length; i++) { 
+				name = index_names[i];
+				options.push(this._option_template(name, data.indices[name])); 
+			}
 			this.el.find(".uiIndexSelector-select").empty().append(this._select_template(options));
 			this._indexChanged_handler();
 		},
@@ -42,4 +43,3 @@
 	});
 
 })( this.jQuery, this.app, this.i18n );
-
