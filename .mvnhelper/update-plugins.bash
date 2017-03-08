@@ -2,10 +2,14 @@
 
 set -e
 
-GIT_REPO="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ELASTICSEARCH_VERSION=`grep '<elasticsearch.version>' ${GIT_REPO}/pom.xml | sed -e 's/.*<elasticsearch.version>\(.*\)<\/elasticsearch.version>.*/\1/'`
+
+MVN_DATA="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+GIT_REPO="$( cd $MVN_DATA/.. && pwd)"
+cd $MVN_DATA
+MVN=mvn
+ELASTICSEARCH_VERSION=`grep '<elasticsearch.version>' ${MVN_DATA}/pom.xml | sed -e 's/.*<elasticsearch.version>\(.*\)<\/elasticsearch.version>.*/\1/'`
 if [ -z "$ELASTICSEARCH_VERSION" ]; then
-  echo "No elastic version defined in $GIT_REPO/pom.xml";
+  echo "No elastic version defined in $MVN_DATA/pom.xml";
   exit 1;
 fi
 
@@ -43,7 +47,7 @@ function install_elastic_plugins_locally {
     plugin_filename=${plugin}-${ELASTICSEARCH_VERSION}.zip
     curl -o ${temp_dir}/${plugin_filename} \
       https://artifacts.elastic.co/downloads/elasticsearch-plugins/${plugin}/${plugin_filename}
-    ./mvnw install:install-file \
+    $MVN install:install-file \
       -Dfile=${temp_dir}/${plugin_filename} \
       -DgroupId=org.elasticsearch.plugin \
       -DartifactId=${plugin} \
@@ -51,7 +55,7 @@ function install_elastic_plugins_locally {
       -Dpackaging=zip \
       -DgeneratePom=true
     unzip ${temp_dir}/${plugin_filename} -d ${temp_dir}
-    ./mvnw install:install-file \
+    $MVN install:install-file \
       -Dfile=${temp_dir}/elasticsearch/${plugin}-${ELASTICSEARCH_VERSION}.jar \
       -DgroupId=org.elasticsearch.plugin \
       -DartifactId=${plugin} \
@@ -63,7 +67,7 @@ function install_elastic_plugins_locally {
 }
 
 function deploy_jars_to_archiva {
-  ./mvnw -Dmdep.copyPom=true -DincludeScope=runtime clean dependency:copy-dependencies
+  $MVN -Dmdep.copyPom=true -DincludeScope=runtime clean dependency:copy-dependencies
 
   echo "The following files are going to be uploaded to archiva"
   ls target/dependency
@@ -71,7 +75,7 @@ function deploy_jars_to_archiva {
   read
 
   for pom in target/dependency/*.pom; do
-    ./mvnw deploy:deploy-file \
+    $MVN deploy:deploy-file \
       -DrepositoryId=archiva.wikimedia.org \
       -Durl=https://archiva.wikimedia.org/repository/mirrored \
       -Dfile="${pom%%.pom}.jar" \
@@ -97,12 +101,12 @@ function check_jar_on_archiva {
 }
 
 function update_git_deployment_repo {
-  ./mvnw -DoutputDirectory=target/plugins clean dependency:copy
+  $MVN -DoutputDirectory=target/plugins clean dependency:copy
 
-  for plugin in `ls ${GIT_REPO}/target/plugins`; do
+  for plugin in `ls ${MVN_DATA}/target/plugins`; do
     rm -rf ${temp_dir}/plugin
     mkdir -p ${temp_dir}/plugin
-    unzip ${GIT_REPO}/target/plugins/${plugin} -d ${temp_dir}/plugin
+    unzip ${MVN_DATA}/target/plugins/${plugin} -d ${temp_dir}/plugin
     plugin_desc=${temp_dir}/plugin/elasticsearch/plugin-descriptor.properties
     plugin_es_version=`grep '^elasticsearch.version=' ${plugin_desc}`
     plugin_es_version=${plugin_es_version##*=}
@@ -138,12 +142,12 @@ command="$1"
 case ${command} in
   upload-archiva)
   install_elastic_plugins_locally
-  ./mvnw clean pgpverify:check
+  $MVN clean pgpverify:check
   deploy_jars_to_archiva
   ;;
 
   prepare-commit)
-  ./mvnw clean pgpverify:check
+  $MVN clean pgpverify:check
   update_git_deployment_repo
   ;;
 
