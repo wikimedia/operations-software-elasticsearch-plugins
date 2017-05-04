@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <elasticsearch.version>5.1.2</elasticsearch.version>
-        <lucene.version>6.3.0</lucene.version>
+        <elasticsearch.version>5.3.2</elasticsearch.version>
+        <lucene.version>6.4.2</lucene.version>
     </properties>
 
     <dependencies>
@@ -93,6 +93,78 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>analysis-ukrainian</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <!-- used by stempel and analysis-ukrainian -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-morfologik</artifactId>
+            <version>${lucene.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-analyzers-common</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-core</artifactId>
+                </exclusion>
+                <!-- maven prefers 2.1.1 but elastic wants 2.1.0
+                     problem is that stempel probably wants another version
+                     solution is not clear yet, probably need a 2 pass upload
+                     to archiva...
+                -->
+                <exclusion>
+                    <groupId>org.carrot2</groupId>
+                    <artifactId>morfologik-fsa</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.carrot2</groupId>
+                    <artifactId>morfologik-stemming</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+             <groupId>org.carrot2</groupId>
+             <artifactId>morfologik-fsa</artifactId>
+             <version>2.1.0</version>
+             <type>jar</type>
+        </dependency>
+        <dependency>
+             <groupId>org.carrot2</groupId>
+             <artifactId>morfologik-stemming</artifactId>
+             <version>2.1.0</version>
+             <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>analysis-smartcn</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-smartcn</artifactId>
+            <version>${lucene.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-analyzers-common</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-analysis-stconvert</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -140,6 +212,24 @@
                         <artifactItem>
                             <groupId>org.wikimedia.search.highlighter</groupId>
                             <artifactId>experimental-highlighter-elasticsearch-plugin</artifactId>
+                            <type>zip</type>
+                            <version>${elasticsearch.version}</version>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.elasticsearch.plugin</groupId>
+                            <artifactId>analysis-ukrainian</artifactId>
+                            <type>zip</type>
+                            <version>${elasticsearch.version}</version>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.elasticsearch.plugin</groupId>
+                            <artifactId>analysis-smartcn</artifactId>
+                            <type>zip</type>
+                            <version>${elasticsearch.version}</version>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.elasticsearch</groupId>
+                            <artifactId>elasticsearch-analysis-stconvert</artifactId>
                             <type>zip</type>
                             <version>${elasticsearch.version}</version>
                         </artifactItem>

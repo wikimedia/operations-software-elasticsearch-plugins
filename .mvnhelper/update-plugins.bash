@@ -13,7 +13,7 @@ if [ -z "$ELASTICSEARCH_VERSION" ]; then
   exit 1;
 fi
 
-ELASTIC_PLUGINS="analysis-icu analysis-stempel"
+ELASTIC_PLUGINS="analysis-icu analysis-stempel analysis-ukrainian analysis-smartcn"
 
 temp_dir=$(mktemp -d)
 
@@ -66,6 +66,33 @@ function install_elastic_plugins_locally {
   done
 }
 
+function install_stconvert_locally {
+  version=${ELASTICSEARCH_VERSION}
+  plugin_name=elasticsearch-analysis-stconvert
+  plugin_filename=${plugin_name}-$version.zip
+  owner=medcl
+  curl -Lo ${temp_dir}/${plugin_filename} \
+    https://github.com/$owner/$plugin_name/releases/download/v${version}/$plugin_filename
+  $MVN install:install-file \
+    -Dfile=${temp_dir}/${plugin_filename} \
+    -DgroupId=org.elasticsearch \
+    -DartifactId=${plugin_name} \
+    -Dversion=${version} \
+    -Dpackaging=zip \
+    -DgeneratePom=true
+
+  # XXX: stconvert zip structure is bad (missing elasticsearch base dir)
+  mkdir ${temp_dir}/elasticsearch
+  unzip ${temp_dir}/${plugin_filename} -d ${temp_dir}/elasticsearch
+  $MVN install:install-file \
+    -Dfile=${temp_dir}/elasticsearch/${plugin_name}-${version}.jar \
+    -DgroupId=org.elasticsearch \
+    -DartifactId=${plugin_name} \
+    -Dversion=${version} \
+    -Dpackaging=jar \
+    -DgeneratePom=true
+  rm -rf ${temp_dir}/elasticsearch
+}
 function deploy_jars_to_archiva {
   $MVN -Dmdep.copyPom=true -DincludeScope=runtime clean dependency:copy-dependencies
 
@@ -79,6 +106,9 @@ function deploy_jars_to_archiva {
       -DrepositoryId=archiva.wikimedia.org \
       -Durl=https://archiva.wikimedia.org/repository/mirrored \
       -Dfile="${pom%%.pom}.jar" \
+      -Dfiles="${pom%%.pom}.jar" \
+      -Dtypes="jar" \
+      -Dclassifiers="jar" \ # needed for some artifact packaged as bundle so the jar is uploaded
       -DgeneratePom=false \
       -DpomFile="${pom}"
   done
@@ -95,8 +125,8 @@ function check_jar_on_archiva {
   fi
   archiva_jar_name=`basename ${link_dest}`
   if [ x${archiva_jar_name} != x${jar_name} ]; then
-    echo "${archiva_jar_name} does not match jar name ${jar_name}"
-    exit 1;
+    # Cannot do a strict check, some jar are uploaded with the "jar" classifier because they are bundle
+    echo "*** WARNING : ${archiva_jar_name} does not match jar name ${jar_name}"
   fi;
 }
 
@@ -105,8 +135,13 @@ function update_git_deployment_repo {
 
   for plugin in `ls ${MVN_DATA}/target/plugins`; do
     rm -rf ${temp_dir}/plugin
-    mkdir -p ${temp_dir}/plugin
-    unzip ${MVN_DATA}/target/plugins/${plugin} -d ${temp_dir}/plugin
+    if [[ $plugin == *"-stconvert"* ]]; then
+      mkdir -p ${temp_dir}/plugin/elasticsearch
+      unzip ${MVN_DATA}/target/plugins/$plugin -d ${temp_dir}/plugin/elasticsearch
+    else
+      mkdir -p ${temp_dir}/plugin
+      unzip ${MVN_DATA}/target/plugins/${plugin} -d ${temp_dir}/plugin
+    fi
     plugin_desc=${temp_dir}/plugin/elasticsearch/plugin-descriptor.properties
     plugin_es_version=`grep '^elasticsearch.version=' ${plugin_desc}`
     plugin_es_version=${plugin_es_version##*=}
@@ -142,7 +177,8 @@ command="$1"
 case ${command} in
   upload-archiva)
   install_elastic_plugins_locally
-  $MVN clean pgpverify:check
+  install_stconvert_locally
+  $MVN -X clean pgpverify:check
   deploy_jars_to_archiva
   ;;
 
