@@ -1,0 +1,11 @@
+Source: wmf-elasticsearch-search-plugins
+Maintainer: David Causse <dcausse@wikimedia.org>
+Build-Depends: debhelper (>= 9), bash, curl, gnupg, unzip
+
+Package: wmf-elasticsearch-search-plugins
+Architecture: all
+Description: Elasticsearch plugins for search
+ List of plugins needed by the elasticsearch cluster that powers search on
+ wmf sites.
+Depends: ${dist:Depends}
+

@@ -1,0 +1,6 @@
+wmf-elasticsearch-search-plugins (5.3.2-0) jessie; urgency=medium
+
+  * Added LTR plugin 1.0.0-RC1-es5.3.2 build (1_0-es5.3 branch at commit 01c6044)
+  * Added analysis-hebrew-plugin
+
+ -- David Causse <dcausse@wikimedia.org>  Fri, 23 Jun 2017 10:00:00 +0200
