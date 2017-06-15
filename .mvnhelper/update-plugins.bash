@@ -66,6 +66,32 @@ function install_elastic_plugins_locally {
   done
 }
 
+function install_ltr_query_locally {
+  version="0.1.1-es${ELASTICSEARCH_VERSION}-SNAPSHOT"
+  group_id="com.o19s"
+  plugin_name="ltr-query"
+  plugin_filename="${plugin_name}-${version}.zip"
+  # Assume this was built locally and published to maven local.
+  # For some reason gradle only publishes the zip and not the jar..
+  repo_path="${HOME}/.m2/repository/${group_id//./\/}/${plugin_name}/${version}"
+
+  unzip "${repo_path}/${plugin_filename}" -d "${temp_dir}"
+  $MVN install:install-file \
+      -Dfile=${temp_dir}/elasticsearch/${plugin_name}-${version}.jar \
+      -DgroupId=${group_id} \
+      -DartifactId=${plugin_name} \
+      -Dversion=${version} \
+      -Dpackaging=jar \
+      -DgeneratePom=true
+  # Also need the RankyMcRankFace dependency.
+  $MVN install:install-file \
+      -Dfile=${temp_dir}/elasticsearch/RankyMcRankFace-0.1.0.jar \
+      -DgroupId=${group_id} \
+      -DartifactId=RankyMcRankFace \
+      -Dversion=0.1.0 \
+      -Dpackaging=jar \
+      -DgeneratePom=true
+}
 function install_stconvert_locally {
   version=${ELASTICSEARCH_VERSION}
   plugin_name=elasticsearch-analysis-stconvert
@@ -102,13 +128,20 @@ function deploy_jars_to_archiva {
   read
 
   for pom in target/dependency/*.pom; do
+    repo=mirrored
+    case "${pom}" in
+        *-SNAPSHOT*)
+            repo="snapshots"
+            ;;
+        *)
+    esac
     $MVN deploy:deploy-file \
       -DrepositoryId=archiva.wikimedia.org \
-      -Durl=https://archiva.wikimedia.org/repository/mirrored \
+      -Durl=https://archiva.wikimedia.org/repository/${repo} \
       -Dfile="${pom%%.pom}.jar" \
       -Dfiles="${pom%%.pom}.jar" \
       -Dtypes="jar" \
-      -Dclassifiers="jar" \ # needed for some artifact packaged as bundle so the jar is uploaded
+      -Dclassifiers="jar" \
       -DgeneratePom=false \
       -DpomFile="${pom}"
   done
@@ -156,7 +189,13 @@ function update_git_deployment_repo {
       check_jar_on_archiva ${jar}
     done
     name=${plugin##*/}
-    name=`basename ${name} -${plugin_version}.zip`
+    # the esplugin gradle plugin explicitly removes -SNAPSHOT from the
+    # plugin version, so we need to re-handle that
+    if [[ $name == *"-SNAPSHOT.zip" ]]; then
+        name=`basename ${name} -${plugin_version}-SNAPSHOT.zip`
+    else
+        name=`basename ${name} -${plugin_version}.zip`
+    fi
     mkdir -p ${temp_dir}/deploy/${name}
     cp -a ${temp_dir}/plugin/elasticsearch/. ${temp_dir}/deploy/${name}
   done
@@ -178,6 +217,7 @@ case ${command} in
   upload-archiva)
   install_elastic_plugins_locally
   install_stconvert_locally
+  install_ltr_query_locally
   $MVN -X clean pgpverify:check
   deploy_jars_to_archiva
   ;;

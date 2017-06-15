@@ -11,9 +11,20 @@
     <properties>
         <elasticsearch.version>5.3.2</elasticsearch.version>
         <lucene.version>6.4.2</lucene.version>
+        <ltr_query.version>0.1.1-es${elasticsearch.version}-SNAPSHOT</ltr_query.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.o19s</groupId>
+            <artifactId>ltr-query</artifactId>
+            <version>${ltr_query.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.o19s</groupId>
+            <artifactId>RankyMcRankFace</artifactId>
+            <version>0.1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.elasticsearch.plugin</groupId>
             <artifactId>analysis-icu</artifactId>
@@ -232,6 +243,12 @@
                             <artifactId>elasticsearch-analysis-stconvert</artifactId>
                             <type>zip</type>
                             <version>${elasticsearch.version}</version>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>com.o19s</groupId>
+                            <artifactId>ltr-query</artifactId>
+                            <type>zip</type>
+                            <version>${ltr_query.version}</version>
                         </artifactItem>
                     </artifactItems>
                 </configuration>
