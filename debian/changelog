@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (5.3.2-1) jessie; urgency=medium
+
+  * Added the Section: database to package metadata
+
+ -- Guillaume Lederrey <gehel@durin.home.ledcom.ch>  Wed, 06 Sep 2017 18:19:12 +0200
+
 wmf-elasticsearch-search-plugins (5.3.2-0) jessie; urgency=medium
 
   * Added LTR plugin 1.0.0-RC1-es5.3.2 build (1_0-es5.3 branch at commit 01c6044)

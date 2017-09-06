@@ -4,6 +4,7 @@ Build-Depends: debhelper (>= 9), bash, curl, gnupg, unzip
 
 Package: wmf-elasticsearch-search-plugins
 Architecture: all
+Section: database
 Description: Elasticsearch plugins for search
  List of plugins needed by the elasticsearch cluster that powers search on
  wmf sites.
