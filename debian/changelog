@@ -1,3 +1,11 @@
+wmf-elasticsearch-search-plugins (5.5.2-0) jessie; urgency=medium
+
+  * Upgrade to elasticsearch 5.5.2
+  * Use wmf release of the ltr plugin (1_0 branch commit
+    7b1419c6239a8095268d78217f16301816a5b625)
+
+ -- David Causse <dcausse@wikimedia.org>  Thu, 07 Sep 2017 10:00:00 +0200
+
 wmf-elasticsearch-search-plugins (5.3.2-2) jessie; urgency=medium
 
   * Bump highlighter to 3.5.2.1
