@@ -1,6 +1,8 @@
 Source: wmf-elasticsearch-search-plugins
+Section: database
 Maintainer: David Causse <dcausse@wikimedia.org>
-Build-Depends: debhelper (>= 9), bash, curl, gnupg, unzip
+Build-Depends: debhelper (>= 9), curl, gnupg, unzip
+Standards-Version: 4.0.0
 
 Package: wmf-elasticsearch-search-plugins
 Architecture: all
