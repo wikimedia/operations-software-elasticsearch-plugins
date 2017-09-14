@@ -1,3 +1,10 @@
+wmf-elasticsearch-search-plugins (5.3.2-2) jessie; urgency=medium
+
+  * Bump highlighter to 3.5.2.1
+    (backport https://phabricator.wikimedia.org/T173231)
+
+ -- David Causse <dcausse@wikimedia.org>  Thu, 14 Sep 2017 11:00:00 +0200
+
 wmf-elasticsearch-search-plugins (5.3.2-1) jessie; urgency=medium
 
   * Added the Section: database to package metadata

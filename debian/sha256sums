@@ -24,10 +24,10 @@ c22bcb9ce141445dc83e24ee8edce3fd91112d7f095cb0b9ced3efc294af6253  debian/blobs/u
 489b8151c2a3773c77b597069718bcb9b00878e40eeaea2caaca7c74b2d25935  debian/blobs/usr/share/elasticsearch/plugins/ltr-query/RankyMcRankFace-0.1.1.jar
 a2bdfbb38b6ad9a44c5db0d0c97b2af2f4568cedc9826b4078646b17bfba4ff5  debian/blobs/usr/share/elasticsearch/plugins/ltr-query/ltr-query-1.0.0-wmf1-es5.3.2.jar
 478ce317231ff42024bf7b6f1447a15e6d961358b564ac158ebfe4c53fdd404f  debian/blobs/usr/share/elasticsearch/plugins/ltr-query/compiler-0.9.3.jar
-addd77e69e42fabfe31a2ef4025329965889e8dc2bbe59bd8f90e2e450f2e55b  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/plugin-descriptor.properties
-eb104d610f124e84669631a169dca8407ce2d06284aa9759feb0ef62fd3f2406  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-lucene-5.3.2.jar
-23bbd2c0bf74c424308281ac73724be4c6e655877657ae6af57b475ced446cfd  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-elasticsearch-plugin-5.3.2.jar
-07832fdb19e553c2d0dc99d3b062979be358dd0d284bf5331d447170fed7dd7c  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-core-5.3.2.jar
+395c1df0d3bc5ff707ca9b4fcc523c918644d0a81f81d7aafb53a47e092b220b  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/plugin-descriptor.properties
+e68a632bc46cc151e29e6539f709b9f99da923e2f1f2c1647797af299602bd5d  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-core-5.3.2.1.jar
+86da0db9159c8f00bc788553ae6b91fbe18cc52b5c04d51290428252a7b9b43d  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-lucene-5.3.2.1.jar
+25e9b9c60f5b455d6fddb906c5e1d65156c823f37aab3035ac27c1dab411590d  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-elasticsearch-plugin-5.3.2.1.jar
 5879e43e22fd4d551e9fe5a0b22b5e995619ea7f38a6a461fd4598438e681d6d  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/plugin-descriptor.properties
 b6c5da019f54af61d2b38cbca7e57076954bc24e354d5529c46f4e787a58a9f5  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/analysis-stempel-5.3.2.jar
 b5f24853af9c403fb2f079473f817e61209212e524613bdc610c9d6b46598e0d  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/NOTICE.txt

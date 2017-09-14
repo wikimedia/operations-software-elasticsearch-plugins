@@ -3,7 +3,7 @@ https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analys
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-ukrainian/analysis-ukrainian-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
-https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/$ELASTICSEARCH_VERSION/experimental-highlighter-elasticsearch-plugin-$ELASTICSEARCH_VERSION.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/5.3.2.1/experimental-highlighter-elasticsearch-plugin-5.3.2.1.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra/$ELASTICSEARCH_VERSION/extra-$ELASTICSEARCH_VERSION.zip,A01B7AEAE1A5E2F3
 http://archiva.wikimedia.org/repository/releases/com/o19s/ltr-query/1.0.0-wmf1-es$ELASTICSEARCH_VERSION/ltr-query-1.0.0-wmf1-es$ELASTICSEARCH_VERSION.zip,none
 https://bintray.com/artifact/download/synhershko/elasticsearch-analysis-hebrew/elasticsearch-analysis-hebrew-$ELASTICSEARCH_VERSION.zip,none
