@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (5.5.2-2) jessie; urgency=medium
+
+  * Add extra-analysis v5.5.2
+
+ -- David Causse <dcausse@wikimedia.org> Tue, 13 Mar 2018 19:00:00 +0100
+
 wmf-elasticsearch-search-plugins (5.5.2-1) jessie; urgency=medium
 
   * Use the official LTR plugin 1.0-RC1 release.

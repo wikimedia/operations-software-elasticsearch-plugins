@@ -35,6 +35,8 @@ a551ce588b2644557925085537ffb842a1af12aee36c507189af3337cd054735  debian/blobs/u
 5a8a0c303813f2fe3bb3b6e6b12dd83684ca51d6cfe8e814727aa09c8847a15a  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-core-5.5.2.2.jar
 6f373f92dbea7448ba4cb552ae1543210b3405313aa5265e422e6ca590a762d4  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-lucene-5.5.2.2.jar
 0134a96d173e81e5a21e61fc259a0a26f575ff3f0bdeebf3b21255acdf601c94  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-elasticsearch-plugin-5.5.2.2.jar
+33f37b00ab5c75e49e2c8bec4ea7bf32a538fd9a5751b77658aa069eeb6723ad  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis/plugin-descriptor.properties
+4f0cc5a1ba2607ab4df487afec5d582a817e957a4f6672f798c4b20bd0879dce  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis/extra-analysis-5.5.2.jar
 4f4b57459cc50744078e58e28dfb15f63b6414fa149e67b8b04c69d8dbd0dc43  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/plugin-descriptor.properties
 b5f24853af9c403fb2f079473f817e61209212e524613bdc610c9d6b46598e0d  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/NOTICE.txt
 afe81a2b60b8c31ed2f19ead6af061860ff38ae06b05fe38d57a43ace2d16e2c  debian/blobs/usr/share/elasticsearch/plugins/analysis-stempel/lucene-analyzers-stempel-6.6.0.jar
