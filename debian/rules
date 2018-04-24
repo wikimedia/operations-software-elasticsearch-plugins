@@ -36,9 +36,9 @@ clean_blobs:
 	rm -rf $(BLOBS_DIR)
 	mkdir $(BLOBS_DIR)
 
-# use this target before uploading to copper
+# use this target before uploading to boron
 prepare_build: download_blobs check_sha256
-	# add some lines to upload to copper?
+	# add some lines to upload to boron?
 	@echo OK
 
 verify_commit: download_blobs check_sha256
