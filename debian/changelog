@@ -1,3 +1,11 @@
+wmf-elasticsearch-search-plugins (5.5.2-6) jessie; urgency=medium
+
+  * Bump extra version to 5.5.2.7 (T195491 and T194245)
+  * Bump extra-analysis-slovak version to 5.5.2.7 (noop)
+  * Bump experimental-highlighter version to 5.5.2.3 (T195491)
+
+ -- David Causse <dcausse@wikimedia.org>  Wed, 13 Jun 2018 10:00:00 +0200
+
 wmf-elasticsearch-search-plugins (5.5.2-5) jessie; urgency=medium
 
   * Remove extra-analysis
