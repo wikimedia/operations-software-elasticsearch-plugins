@@ -1,3 +1,13 @@
+wmf-elasticsearch-search-plugins (6.5.4-1) stretch; urgency=medium
+
+  * Add analyzer-nori (korean)
+  * Bump all plugins to 6.5.4
+  * Custom build of the hebrew plugin
+  * Had to build a 6.5.4 version of the ltr plugins
+  * The package now depends on elasticsearch or elasticsearch-oss
+
+ -- David Causse <dcausse@wikimedia.org>  Mon, 18 Feb 2019 19:00:00 +0100
+
 wmf-elasticsearch-search-plugins (5.5.2-6) jessie; urgency=medium
 
   * Bump extra version to 5.5.2.7 (T195491 and T194245)

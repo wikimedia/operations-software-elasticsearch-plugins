@@ -2,11 +2,11 @@
 
 # Ideally the distribution should be infered by the build system
 # but apparently using $(shell lsb_release -sr) does not work
-# properly with pbuilder, force it to jessie for now
-DISTRIBUTION = jessie
-VERSION = 5.5.2
-BUILD_VERSION = 6
-ELASTIC_VERSION = 5.5.2
+# properly with pbuilder, force it to stretch for now
+DISTRIBUTION = stretch
+VERSION = 6.5.4
+BUILD_VERSION = 1
+ELASTIC_VERSION = 6.5.4
 PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
 BLOBS_DIR=debian/blobs
@@ -23,7 +23,7 @@ override_dh_auto_install:
 	cp -a $(BLOBS_DIR) debian/wmf-elasticsearch-search-plugins
 
 override_dh_gencontrol:
-	dh_gencontrol -- -v$(PACKAGEVERSION) -Vdist:Depends="elasticsearch (=$(ELASTIC_VERSION))"
+	dh_gencontrol -- -v$(PACKAGEVERSION) -Vdist:Depends="elasticsearch-oss (=$(ELASTIC_VERSION)) | elasticsearch (=$(ELASTIC_VERSION))"
 
 download_blobs: clean_blobs
 	debian/checkout.bash $(BLOBS_DIR) $(PLUGIN_LIST) $(ELASTIC_VERSION)
