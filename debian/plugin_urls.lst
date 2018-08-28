@@ -6,6 +6,7 @@ https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-ukrainian/
 https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/5.5.2.3/experimental-highlighter-elasticsearch-plugin-5.5.2.3.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra/5.5.2.7/extra-5.5.2.7.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-slovak/5.5.2.7/extra-analysis-slovak-5.5.2.7.zip,A01B7AEAE1A5E2F3
-https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-serbian/5.5.2.1/extra-analysis-serbian-5.5.2.1.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-serbian/5.5.2.2/extra-analysis-serbian-5.5.2.2.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-esperanto/5.5.2.2/extra-analysis-esperanto-5.5.2.2.zip,A01B7AEAE1A5E2F3
 http://es-learn-to-rank.labs.o19s.com/ltr-1.0.0-RC1-es$ELASTICSEARCH_VERSION.zip,none
 https://bintray.com/artifact/download/synhershko/elasticsearch-analysis-hebrew/elasticsearch-analysis-hebrew-$ELASTICSEARCH_VERSION.zip,none

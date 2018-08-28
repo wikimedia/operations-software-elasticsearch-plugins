@@ -21,7 +21,7 @@ for plugin_def in `cat $PLUGIN_LIST | grep -v '^#'`; do
         curl -fLo $temp_dir/plugin.zip.asc $url.asc
         rm -f $temp_dir/keyring.gpg
         echo "Verifying gpg signature..."
-        gpg --no-default-keyring --keyring $temp_dir/keyring.gpg --recv-keys $key
+        gpg --no-default-keyring --keyserver hkp://pool.sks-keyservers.net --keyring $temp_dir/keyring.gpg --recv-keys $key
         gpg --no-default-keyring --keyring $temp_dir/keyring.gpg --verify $temp_dir/plugin.zip.asc $temp_dir/plugin.zip
     else
         echo "WARNING trying to download $url without a signature file"
