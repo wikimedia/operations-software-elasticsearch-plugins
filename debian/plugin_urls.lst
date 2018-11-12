@@ -3,9 +3,10 @@ https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analys
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-ukrainian/analysis-ukrainian-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
-https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/5.5.2.3/experimental-highlighter-elasticsearch-plugin-5.5.2.3.zip,A01B7AEAE1A5E2F3
-https://repo1.maven.org/maven2/org/wikimedia/search/extra/5.5.2.7/extra-5.5.2.7.zip,A01B7AEAE1A5E2F3
-https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-slovak/5.5.2.7/extra-analysis-slovak-5.5.2.7.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/5.5.2.4/experimental-highlighter-elasticsearch-plugin-5.5.2.4.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra/5.5.2.8/extra-5.5.2.8.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-slovak/5.5.2.8/extra-analysis-slovak-5.5.2.8.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-surrogates/5.5.2.8/extra-analysis-surrogates-5.5.2.8.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-serbian/5.5.2.2/extra-analysis-serbian-5.5.2.2.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-esperanto/5.5.2.2/extra-analysis-esperanto-5.5.2.2.zip,A01B7AEAE1A5E2F3
 http://es-learn-to-rank.labs.o19s.com/ltr-1.0.0-RC1-es$ELASTICSEARCH_VERSION.zip,none
