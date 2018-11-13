@@ -2,8 +2,8 @@
 
 # Ideally the distribution should be infered by the build system
 # but apparently using $(shell lsb_release -sr) does not work
-# properly with pbuilder, force it to jessie for now
-DISTRIBUTION = jessie
+# properly with pbuilder, force it to stretch for now
+DISTRIBUTION = stretch
 VERSION = 5.5.2
 BUILD_VERSION = 8
 ELASTIC_VERSION = 5.5.2

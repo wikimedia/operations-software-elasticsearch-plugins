@@ -1,3 +1,10 @@
+wmf-elasticsearch-search-plugins (5.5.2-8) stretch; urgency=medium
+
+  * Package is now built for Debian Stretch by default
+  * Fix surrogate pair issues
+
+ -- Guillaume Lederrey <guillaume.lederrey@wikimedia.org>  Tue, 13 Nov 2018 10:28:47 +0100
+
 wmf-elasticsearch-search-plugins (5.5.2-7) stretch; urgency=medium
 
   * Add extra-analysis-esperanto 5.5.2.2
