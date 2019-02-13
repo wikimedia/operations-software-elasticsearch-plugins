@@ -1,3 +1,13 @@
+wmf-elasticsearch-search-plugins (5.6.14-1) stretch; urgency=medium
+
+  * Bump to 5.6.14
+  * Custom build for hebmorh:
+    https://github.com/nomoa/HebMorph/commit/e2bf372f8dd20709026b44f6cbe0c160a26fef77
+  * Custom build for the LTR plugin:
+    https://github.com/o19s/elasticsearch-learning-to-rank/commit/447eddd1573f820e6ae1a9993f8e9c9ca6f7bc43
+
+ -- David Causse <dcausse@wikimedia.org>  Wed, 13 Feb 2019 11:00:00 +0100
+
 wmf-elasticsearch-search-plugins (5.5.2-8) stretch; urgency=medium
 
   * Package is now built for Debian Stretch by default
