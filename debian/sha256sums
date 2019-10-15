@@ -41,10 +41,10 @@ c91db33831762a305d6d30fbd4230d9e57798706e25c35222c9bee1eb3e00109  debian/blobs/u
 1c7e5f7158e02bd35924a73a85958313c95a00d0973f830d0d19a8268a35a668  debian/blobs/usr/share/elasticsearch/plugins/analysis-ukrainian/morfologik-ukrainian-search-3.7.5.jar
 17a382112c8b5ab4175179e9feab818cc7a6f99b2bccbbc36b3745fdc78cd115  debian/blobs/usr/share/elasticsearch/plugins/analysis-ukrainian/NOTICE.txt
 6d2468c4269c85e07695800dbee3f8a74a90872ad943a8c37b9cda70f94e786a  debian/blobs/usr/share/elasticsearch/plugins/analysis-ukrainian/plugin-descriptor.properties
-7c64f062a300cbc53f0df8acf2e33888496540b559bf5337223a4fe6a10bf5c1  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-core-6.5.4.jar
-0d0c1acc4132c5a686425206809c4c1f7d29c46ca95c37ae11a90def6cae2276  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-elasticsearch-plugin-6.5.4.jar
-7d93bf551b005f6599bf78736f024176e1060a2e313d9131565cf2b545febda8  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-lucene-6.5.4.jar
-296790f7d724fdd38d4e9e6ba52c22ec6508beddf6046b8ab8c50849e42dadf4  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/plugin-descriptor.properties
+3a56d68ecdc24bb23133bf98e8c83d035eab5368e9b774c10159715d728c2567  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-core-6.5.4.1.jar
+a20b32b28b141fd0db5e1cfc9cac976b1266c648455ec357631720be1154cdc8  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-elasticsearch-plugin-6.5.4.1.jar
+c13ee039020be6e43df88846a45a5fdccc8277ae8a6a222193665592e774be8a  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/experimental-highlighter-lucene-6.5.4.1.jar
+bf7c39c9b446f21aaab0dab41d293983227a8679b0aed6870d8a4cd71c8ae992  debian/blobs/usr/share/elasticsearch/plugins/experimental-highlighter/plugin-descriptor.properties
 7025df33c5d50da87540c45491a2f70a9c13f474cd4613124211851423c71118  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-esperanto/extra-analysis-esperanto-6.5.4.jar
 1af9b6e879bc13d107b8441f98db21fc55c8a88382b85939b807b7c9e205f3c2  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-esperanto/plugin-descriptor.properties
 0f26fe79770a3138380ac4e8680ea414ccfe0078b9105f7b5c61855539722b42  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-serbian/extra-analysis-serbian-6.5.4.jar

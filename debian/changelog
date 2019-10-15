@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.5.4-2) stretch; urgency=medium
+
+  * Bump to experimental-highlighter 6.5.4.1 (T234613)
+
+ -- David Causse <dcausse@wikimedia.org>  Tue, 15 Oct 2019 18:04:27 +0200
+
 wmf-elasticsearch-search-plugins (6.5.4-1) stretch; urgency=medium
 
   * Add analyzer-nori (korean)
