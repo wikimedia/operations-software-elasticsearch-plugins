@@ -30,7 +30,7 @@ download_blobs: clean_blobs
 
 # use this target before commiting to gerrit
 prepare_commit: download_blobs
-	find $(BLOBS_DIR) -type f -exec sha256sum {} \; | sort -k2 > $(SHA256FILE)
+	find $(BLOBS_DIR) -type f -exec sha256sum {} \; | LC_ALL=C sort -k2 > $(SHA256FILE)
 
 clean_blobs:
 	rm -rf $(BLOBS_DIR)
