@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.5.4-3) stretch; urgency=medium
+
+  * Add homoglyph plugin (T222669) and bump extra versions 6.5.4-wmf9
+
+  -- Maryum Styles <mstyles@wikimedia.org> Tue, 28 Apr 2020 11:33:48 -0700
+
 wmf-elasticsearch-search-plugins (6.5.4-2) stretch; urgency=medium
 
   * Bump to experimental-highlighter 6.5.4.1 (T234613)
