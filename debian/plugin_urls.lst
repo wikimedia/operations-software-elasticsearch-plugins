@@ -5,8 +5,8 @@ https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/an
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-ukrainian/analysis-ukrainian-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-nori/analysis-nori-$ELASTICSEARCH_VERSION.zip,D27D666CD88E42B4
 https://repo1.maven.org/maven2/org/wikimedia/search/highlighter/experimental-highlighter-elasticsearch-plugin/$ELASTICSEARCH_VERSION.1/experimental-highlighter-elasticsearch-plugin-$ELASTICSEARCH_VERSION.1.zip,A01B7AEAE1A5E2F3
-https://repo1.maven.org/maven2/org/wikimedia/search/extra/$ELASTICSEARCH_VERSION-wmf9/extra-$ELASTICSEARCH_VERSION-wmf9.zip,DC7426D4E8453E37
-https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-homoglyph/$ELASTICSEARCH_VERSION-wmf9/extra-analysis-homoglyph-$ELASTICSEARCH_VERSION-wmf9.zip,DC7426D4E8453E37
+https://repo1.maven.org/maven2/org/wikimedia/search/extra/$ELASTICSEARCH_VERSION-wmf11/extra-$ELASTICSEARCH_VERSION-wmf11.zip,A01B7AEAE1A5E2F3
+https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-homoglyph/$ELASTICSEARCH_VERSION-wmf11/extra-analysis-homoglyph-$ELASTICSEARCH_VERSION-wmf11.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-slovak/$ELASTICSEARCH_VERSION/extra-analysis-slovak-$ELASTICSEARCH_VERSION.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-serbian/$ELASTICSEARCH_VERSION/extra-analysis-serbian-$ELASTICSEARCH_VERSION.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-esperanto/$ELASTICSEARCH_VERSION/extra-analysis-esperanto-$ELASTICSEARCH_VERSION.zip,A01B7AEAE1A5E2F3
