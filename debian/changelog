@@ -1,3 +1,10 @@
+wmf-elasticsearch-search-plugins (6.5.4-5) stretch; urgency=medium
+
+  * add extra-analysis-khmer 6.5.4-wmf13
+  * bump all extra plugins to 6.5.4-wmf13
+
+ -- David Causse <dcausse@wikimedia.org>  Tue, 09 Feb 2021 11:36:55 +0100
+
 wmf-elasticsearch-search-plugins (6.5.4-4) stretch; urgency=medium
 
   * Bump extra versions 6.5.4-wmf11. Includes multilist handler for

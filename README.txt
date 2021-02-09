@@ -45,14 +45,14 @@ III. BUILD THE DEBIAN PACKAGE
 ---------------------------
 An ops engineer can then build the package.
 First they need to fetch the blobs on their local machine prior to uploading to
-boron:
+deneb:
 
 $ ./debian/rules prepare_build
 
 It'll download all the files and make all the verifications again.
-If everything looks good they can scp the whole dir to boron and then build
+If everything looks good they can scp the whole dir to deneb and then build
 the package with
-$ DIST=jessie-wikimedia pdebuild
+$ DIST=stretch-wikimedia pdebuild
 
 NOTE: the sha256sums are verified again.
 
@@ -75,7 +75,7 @@ The sha256sums file is generated only one time per patch by the gerrit uploader.
 It then verified 3 times:
  1. The reviewer
  2. The ops on the prepare_build command
- 3. On boron by dpkg-buildpackage
+ 3. On deneb by dpkg-buildpackage
 
 V. FILES
 ---------
