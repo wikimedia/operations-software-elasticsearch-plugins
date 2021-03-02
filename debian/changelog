@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.5.4-6) stretch; urgency=medium
+
+  * rebuild the package
+
+ -- David Causse <dcausse@wikimedia.org>  Tue, 02 Mar 2021 11:28:28 +0100
+
 wmf-elasticsearch-search-plugins (6.5.4-5) stretch; urgency=medium
 
   * add extra-analysis-khmer 6.5.4-wmf13
