@@ -94,3 +94,11 @@ https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analys
 Use none when the zip is not signed.
 $ELASTICSEARCH_VERSION will resolve to the version defined in debian/rules,
 it's useful for core plugins.
+
+VII. DEVELOPER IMAGES
+---------------------
+When shipping a new version of the plugins you might want to also update the
+images used by developers that work with CirrusSearch and Elasticsearch. The
+project is named releng/dev-images
+(https://gerrit.wikimedia.org/r/admin/repos/releng/dev-images) and the Docker
+file is dockerfiles/elasticsearch/Dockerfile.template.
