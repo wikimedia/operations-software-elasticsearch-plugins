@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.5.4-7) stretch; urgency=medium
+
+  * Add repository-swift plugin to support T295705
+
+ -- Erik <ebernhardson@ebernhardson-ThinkPad-X1-Carbon-7th>  Mon, 15 Nov 2021 10:02:14 -0800
+
 wmf-elasticsearch-search-plugins (6.5.4-6) stretch; urgency=medium
 
   * rebuild the package
