@@ -5,7 +5,7 @@
 # properly with pbuilder, force it to stretch for now
 DISTRIBUTION = stretch
 VERSION = 6.5.4
-BUILD_VERSION = 7
+BUILD_VERSION = 8
 ELASTIC_VERSION = 6.5.4
 PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
