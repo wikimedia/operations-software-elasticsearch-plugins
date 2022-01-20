@@ -4,9 +4,9 @@
 # but apparently using $(shell lsb_release -sr) does not work
 # properly with pbuilder, force it to stretch for now
 DISTRIBUTION = stretch
-VERSION = 6.5.4
-BUILD_VERSION = 8
-ELASTIC_VERSION = 6.5.4
+VERSION = 6.8.23
+BUILD_VERSION = 1
+ELASTIC_VERSION = 6.8.23
 PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
 BLOBS_DIR=debian/blobs

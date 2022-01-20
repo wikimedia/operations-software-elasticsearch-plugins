@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.8.23-1) stretch; urgency=medium
+
+  * Upgrade to elasticsearch 6.8.23
+
+ -- Emmanuel Joseph <ejoseph@wikimedia.org>  Thu, 20 Jan 2022 07:34:00 +0100
+
 wmf-elasticsearch-search-plugins (6.5.4-8) stretch; urgency=medium
 
   * Remove repository-swift plugin to complete T295705
