@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-1) stretch; urgency=medium
+
+  * Upgrade to elasticsearch 7.10.2
+
+ -- Emmanuel Joseph <ejoseph@wikimedia.org>  Thu, 17 Feb 2022 07:34:00 +0100
+
 wmf-elasticsearch-search-plugins (6.8.23-1) stretch; urgency=medium
 
   * Upgrade to elasticsearch 6.8.23

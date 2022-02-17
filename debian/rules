@@ -4,9 +4,9 @@
 # but apparently using $(shell lsb_release -sr) does not work
 # properly with pbuilder, force it to stretch for now
 DISTRIBUTION = stretch
-VERSION = 6.8.23
+VERSION = 7.10.2
 BUILD_VERSION = 1
-ELASTIC_VERSION = 6.8.23
+ELASTIC_VERSION = 7.10.2
 PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
 BLOBS_DIR=debian/blobs
@@ -26,7 +26,7 @@ override_dh_gencontrol:
 	dh_gencontrol -- -v$(PACKAGEVERSION) -Vdist:Depends="elasticsearch-oss (=$(ELASTIC_VERSION)) | elasticsearch (=$(ELASTIC_VERSION))"
 
 download_blobs: clean_blobs
-	debian/checkout.bash $(BLOBS_DIR) $(PLUGIN_LIST) $(ELASTIC_VERSION)
+	bash debian/checkout.bash $(BLOBS_DIR) $(PLUGIN_LIST) $(ELASTIC_VERSION)
 
 # use this target before commiting to gerrit
 prepare_commit: download_blobs
