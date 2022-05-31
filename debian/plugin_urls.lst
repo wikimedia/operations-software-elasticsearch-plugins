@@ -15,3 +15,4 @@ https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-esperanto/$EL
 https://people.wikimedia.org/~ejoseph/ltr-1.1.1-es$ELASTICSEARCH_VERSION.zip,none
 #https://bintray.com/artifact/download/synhershko/elasticsearch-analysis-hebrew/elasticsearch-analysis-hebrew-$ELASTICSEARCH_VERSION.zip,none
 https://people.wikimedia.org/~ejoseph/analysis-hebrew-6.8.23.zip,none
+https://artifacts.elastic.co/downloads/elasticsearch-plugins/repository-s3/repository-s3-6.8.23.zip,D27D666CD88E42B4

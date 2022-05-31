@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.8.23-2) stretch; urgency=medium
+
+  * Add official elastic S3 plugin
+
+ -- Brian King <bking@wikimedia.org>  Tue, 31 May 2022 13:25:28 -0600
+
 wmf-elasticsearch-search-plugins (6.8.23-1) stretch; urgency=medium
 
   * Upgrade to elasticsearch 6.8.23
