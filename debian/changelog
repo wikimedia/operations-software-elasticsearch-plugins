@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.8.23-3) stretch; urgency=medium
+
+  * Use our custom repository-s3 snapshot
+
+ -- Ryan Kemper <rkemper@wikimedia.org>  Wed, 8 Jun 2022 15:42:40 -0700
+
 wmf-elasticsearch-search-plugins (6.8.23-2) stretch; urgency=medium
 
   * Add official elastic S3 plugin
