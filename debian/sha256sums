@@ -91,4 +91,4 @@ d9e3565ee9896f54965bf1fa42ae1fe99b19b03b10a94535ae878e429e2c1923  debian/blobs/u
 4d72247c743355a6162851b9b3ff87fb44512d1c1d0cdcee28f58a04c6cc0216  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/jmespath-java-1.11.406.jar
 7e1cd8bacd0a0174827d00a9f5c8d6c8be2ed9c43cb2d53de7b41f7f7a01e244  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/plugin-descriptor.properties
 0c813eff5274dbb82a74359bab466e6bd1f7147ce8378d58d156643eb859f4c0  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/plugin-security.policy
-ac67d1cd381653ca1959406b9b5703498e72f6dcba156a25c28a1e517f5ca4fc  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/repository-s3-6.8.23.jar
+60e4681aa9fd7a4a5184fc2f732a6e1ae48f3496231f37fa7d8def3f68dff4a6  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/repository-s3-6.8.23-SNAPSHOT.jar
