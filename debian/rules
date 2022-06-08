@@ -11,6 +11,8 @@ PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
 BLOBS_DIR=debian/blobs
 SHA256FILE=debian/sha256sums
+SHORT_VERSION = $(shell echo $(ELASTIC_VERSION) | cut -d '.' -f 1-2 | tr -d '.')
+COMPONENT = elastic$(SHORT_VERSION)
 
 %:
 	dh $@
@@ -29,7 +31,7 @@ download_blobs: clean_blobs
 	debian/checkout.bash $(BLOBS_DIR) $(PLUGIN_LIST) $(ELASTIC_VERSION)
 
 # use this target before commiting to gerrit
-prepare_commit: download_blobs
+prepare_commit: download_blobs verify_unreleased
 	find $(BLOBS_DIR) -type f -exec sha256sum {} \; | LC_ALL=C sort -k2 > $(SHA256FILE)
 
 clean_blobs:
@@ -43,6 +45,9 @@ prepare_build: download_blobs check_sha256
 
 verify_commit: download_blobs check_sha256
 	@echo OK
+
+verify_unreleased:
+	! curl --fail --head https://apt.wikimedia.org/wikimedia/pool/component/$(COMPONENT)/w/wmf-elasticsearch-search-plugins/wmf-elasticsearch-search-plugins_$(VERSION)-$(BUILD_VERSION).tar.gz
 
 check_sha256:
 	sha256sum -c $(SHA256FILE)
