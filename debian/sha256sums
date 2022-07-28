@@ -59,10 +59,10 @@ f5cc685edd99ccae7e9b851613146cf49f2557a4e056dfdd8e7906fe919f826f  debian/blobs/u
 d670364eb4c784d2cc807c9af25c8fd76fd5d669bf3f1b6922fb651ca622a12f  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-slovak/extra-analysis-slovak-6.8.23-wmf1.jar
 4d8ffda53da8d39471a02404401deb91662c392502ddca3bce7172f8041f6c96  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-slovak/extra-common-6.8.23-wmf1.jar
 04cce561dc4f1000466fc4fa052b69119be6615fe864b2a784912cb82d6f3402  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-slovak/plugin-descriptor.properties
-61400c873cc828afbb568c316c812198a42ecc025ca42f90c0a3f05d49d4df09  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-6.8.23-wmf1.jar
-4d8ffda53da8d39471a02404401deb91662c392502ddca3bce7172f8041f6c96  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-common-6.8.23-wmf1.jar
+a229ccbf091e9231e433737e55c7ff21a4696eb1906fcff4c401656ec5698244  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-6.8.23-wmf2.jar
+f34c8c8dbe8e522fc2545e7ddedab7ee32cd641084ce081cf69215c66a136554  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-common-6.8.23-wmf2.jar
 972139718abc8a4893fa78cba8cf7b2c903f35c97aaf44fa3031b0669948b480  debian/blobs/usr/share/elasticsearch/plugins/extra/guava-21.0.jar
-aeb769aa515d4fa6e766e1216f57c7b69e40fc632dfdce260d78d2335385b597  debian/blobs/usr/share/elasticsearch/plugins/extra/plugin-descriptor.properties
+6232c50a005bebd5b7bfbb6c9696ac409e7b3f252f6735787a0872e438570369  debian/blobs/usr/share/elasticsearch/plugins/extra/plugin-descriptor.properties
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  debian/blobs/usr/share/elasticsearch/plugins/ltr/LICENSE.txt
 b79d28873988fb3e4079840b76144d904adf01e27129643d2d62d046d58ff6cd  debian/blobs/usr/share/elasticsearch/plugins/ltr/NOTICE.txt
 50a55ef02ead9a9f1c0dd69dd324ca935fcb854c28cfdb857dcdd9e3575ae9b5  debian/blobs/usr/share/elasticsearch/plugins/ltr/RankyMcRankFace-0.1.1.jar

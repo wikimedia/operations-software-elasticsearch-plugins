@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (6.8.23-4) stretch; urgency=medium
+
+  * Update search-extra to 6.8.23-wmf2
+
+ -- Erik <ebernhardson@ebernhardson-ThinkPad-X1-Carbon-7th>  Thu, 28 Jul 2022 15:53:28 -0700
+
 wmf-elasticsearch-search-plugins (6.8.23-3) stretch; urgency=medium
 
   * Use our custom repository-s3 snapshot
