@@ -2,11 +2,11 @@
 
 # Ideally the distribution should be infered by the build system
 # but apparently using $(shell lsb_release -sr) does not work
-# properly with pbuilder, force it to stretch for now
-DISTRIBUTION = stretch
-VERSION = 6.8.23
-BUILD_VERSION = 4
-ELASTIC_VERSION = 6.8.23
+# properly with pbuilder, force it to bullseye for now
+DISTRIBUTION = bullseye
+VERSION = 7.10.2
+BUILD_VERSION = 2
+ELASTIC_VERSION = 7.10.2
 PACKAGEVERSION = $(VERSION)-$(BUILD_VERSION)~$(DISTRIBUTION)
 PLUGIN_LIST=debian/plugin_urls.lst
 BLOBS_DIR=debian/blobs

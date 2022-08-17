@@ -52,7 +52,7 @@ $ ./debian/rules prepare_build
 It'll download all the files and make all the verifications again.
 If everything looks good they can scp the whole dir to deneb and then build
 the package with
-$ DIST=stretch-wikimedia pdebuild
+$ DIST=bullseye-wikimedia pdebuild
 
 NOTE: the sha256sums are verified again.
 

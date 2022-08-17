@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-2) bullseye; urgency=medium
+
+  * Update search-extra to 7.10.2-wmf2
+
+ -- Ryan Kemper <rkemper@wikimedia.org>  Wed, 17 Aug 2022 15:02:00 -0700
+
 wmf-elasticsearch-search-plugins (6.8.23-4) stretch; urgency=medium
 
   * Update search-extra to 6.8.23-wmf2
