@@ -12,7 +12,7 @@ https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-khmer/$ELASTI
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-slovak/$ELASTICSEARCH_VERSION-wmf4/extra-analysis-slovak-$ELASTICSEARCH_VERSION-wmf4.zip,A01B7AEAE1A5E2F3
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-serbian/$ELASTICSEARCH_VERSION/extra-analysis-serbian-$ELASTICSEARCH_VERSION.zip,F684F0EC24A878FD
 https://repo1.maven.org/maven2/org/wikimedia/search/extra-analysis-esperanto/$ELASTICSEARCH_VERSION/extra-analysis-esperanto-$ELASTICSEARCH_VERSION.zip,F684F0EC24A878FD
-https://github.com/o19s/elasticsearch-learning-to-rank/releases/download/v1.5.4-es$ELASTICSEARCH_VERSION/ltr-plugin-v1.5.4-es$ELASTICSEARCH_VERSION.zip,none
+https://people.wikimedia.org/~ebernhardson/ltr-1.5.4-wmf1-es7.10.2.zip,none
 #https://bintray.com/artifact/download/synhershko/elasticsearch-analysis-hebrew/elasticsearch-analysis-hebrew-$ELASTICSEARCH_VERSION.zip,none
 https://people.wikimedia.org/~dcausse/analysis-hebrew-7.10.2.zip,none
 https://artifacts.elastic.co/downloads/elasticsearch-plugins/repository-s3/repository-s3-7.10.2.zip,none

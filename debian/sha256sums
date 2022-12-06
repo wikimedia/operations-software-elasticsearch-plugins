@@ -80,9 +80,9 @@ fc68d27d03ae26180523ce20e387db00bd0fdeec54fca24d2990592c0afad112  debian/blobs/u
 cb9422df1f98a886b608b27318d9903d6c7fe2813521d5452c86531ec3c02b9f  debian/blobs/usr/share/elasticsearch/plugins/ltr/asm-commons-8.0.1.jar
 f321b2b6ba609207dc7ae4907bd9a8e639f975ce62d90239acd9353994d1c811  debian/blobs/usr/share/elasticsearch/plugins/ltr/asm-tree-8.0.1.jar
 478ce317231ff42024bf7b6f1447a15e6d961358b564ac158ebfe4c53fdd404f  debian/blobs/usr/share/elasticsearch/plugins/ltr/compiler-0.9.3.jar
-087b5d2484e1770dd640f660cec651bc2322cbf326811c04324c43116ab4f36d  debian/blobs/usr/share/elasticsearch/plugins/ltr/ltr-1.5.4-es7.10.2.jar
+da4ff2a901c9b5fbca0a86f230a4bd508239254da1d89e5fe0e0d955e9389ed9  debian/blobs/usr/share/elasticsearch/plugins/ltr/ltr-1.5.4-wmf1-es7.10.2.jar
 a691361431abff787b63bf095dd3a6c02dba14a4dcf9f8cfb16d194d59568cf7  debian/blobs/usr/share/elasticsearch/plugins/ltr/lucene-expressions-8.7.0.jar
-6f03f847f7d37edcbee38d631ad2bfd7f9dafe77a6507e32667e2b132ee21ced  debian/blobs/usr/share/elasticsearch/plugins/ltr/plugin-descriptor.properties
+f21315b9830720a5e2dcf6dc00b2887293963676f13c1a83eac7b3cf7df5b53d  debian/blobs/usr/share/elasticsearch/plugins/ltr/plugin-descriptor.properties
 d2a1a7d883f61f77c251e1b50f694e62ebbab4d5faf21cbdde29b46ec7ea5a7b  debian/blobs/usr/share/elasticsearch/plugins/ltr/plugin-security.policy
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/LICENSE.txt
 385d6063fcde6b4d24e7bfc288ddc4aa361c85a02279091776ae274c310d2f95  debian/blobs/usr/share/elasticsearch/plugins/repository-s3/NOTICE.txt
