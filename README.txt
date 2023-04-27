@@ -4,7 +4,7 @@ I. PREPARE A NEW VERSION
 ------------------------
 When adding a new plugin or upgrading to a new elastic version the developer
 needs to:
- - update debian/rules to set the new elastic version
+ - update debian/rules to set the new elastic/build version
  - update debian/plugin_urls.lst to add new plugins or change custom versions
  - update debian/changelog to indicate what's new
 

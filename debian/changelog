@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-5) bullseye; urgency=medium
+
+  * Add extra-analysis-turkish plugin
+
+ -- Erik <ebernhardson@wikimedia.org>  Thu, 27 Apr 2023 13:39:43 -0700
+
 wmf-elasticsearch-search-plugins (7.10.2-4) bullseye; urgency=medium
 
   * Update ltr to 7.10.2-wmf1
