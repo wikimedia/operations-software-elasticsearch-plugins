@@ -101,6 +101,5 @@ VII. DEVELOPER IMAGES
 ---------------------
 When shipping a new version of the plugins you might want to also update the
 images used by developers that work with CirrusSearch and Elasticsearch. The
-project is named releng/dev-images
-(https://gerrit.wikimedia.org/r/admin/repos/releng/dev-images) and the Docker
-file is dockerfiles/elasticsearch/Dockerfile.template.
+project is named cirrussearch-elasticsearch-image
+(https://gitlab.wikimedia.org/repos/search-platform/cirrussearch-elasticsearch-image).
