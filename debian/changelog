@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-9) bullseye; urgency=medium
+
+  * Add max_size parameter to extra plugin's super_detect_noop set handler
+
+ -- Peter <pfischer@wikimedia.org>  Fri, 14 Jul 2023 10:00:00 +0200
+
 wmf-elasticsearch-search-plugins (7.10.2-5) bullseye; urgency=medium
 
   * Add extra-analysis-turkish plugin
