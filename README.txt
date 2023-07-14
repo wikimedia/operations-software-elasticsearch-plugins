@@ -6,6 +6,8 @@ When adding a new plugin or upgrading to a new elastic version the developer
 needs to:
  - update debian/rules to set the new elastic/build version
  - update debian/plugin_urls.lst to add new plugins or change custom versions
+   make sure the GPG key ID (separated by comma at the end of a line) matches
+   the one used for signing the release, and that this key has been published
  - update debian/changelog to indicate what's new
 
 Then they need to generate the debian/sha256sums file:
