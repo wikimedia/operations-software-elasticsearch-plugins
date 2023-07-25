@@ -70,10 +70,10 @@ cfcb4fd0dd532f2ccb21e1dfa103ee4215d962db115508703ba5f3bbe0cedb18  debian/blobs/u
 6170895b2315b697f4da5630caf57c6c441f1cb419d89d1cb5326b0673293e8a  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-ukrainian/morfologik-stemming-2.1.9.jar
 463d9054b8d4cfacb9cd69566395826a6fe32fb6e7da91dbf79d37ddf7d56ba0  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-ukrainian/morfologik-ukrainian-search-4.9.1.jar
 e9a3bddf91e61215b1f9d2bfd092bce5c4ff8dec93c56e3cb41dfaa3bc96f152  debian/blobs/usr/share/elasticsearch/plugins/extra-analysis-ukrainian/plugin-descriptor.properties
-7165e7032feb5e8b5d8ccc88b40148ccc60d3177bb40b416ebdbe367e308e79f  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-7.10.2-wmf8.jar
-cfcb4fd0dd532f2ccb21e1dfa103ee4215d962db115508703ba5f3bbe0cedb18  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-common-7.10.2-wmf8.jar
+35dc54537a65851873dc702c0cb06f8a0c325dbb74a47c9603dec2cdacc3517a  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-7.10.2-wmf9.jar
+e2fde376a88646a0f49690359931dc02a44cb6ce23a6c42b09771d920024e738  debian/blobs/usr/share/elasticsearch/plugins/extra/extra-common-7.10.2-wmf9.jar
 972139718abc8a4893fa78cba8cf7b2c903f35c97aaf44fa3031b0669948b480  debian/blobs/usr/share/elasticsearch/plugins/extra/guava-21.0.jar
-4528d3795d7df18b35a41ef4e8761d36bda3dc3861c34169e0e883701f8abc34  debian/blobs/usr/share/elasticsearch/plugins/extra/plugin-descriptor.properties
+dc178e0a94202275e4933404e34648e509230544d5b8e85b876312d28be9d427  debian/blobs/usr/share/elasticsearch/plugins/extra/plugin-descriptor.properties
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  debian/blobs/usr/share/elasticsearch/plugins/ltr/LICENSE.txt
 b79d28873988fb3e4079840b76144d904adf01e27129643d2d62d046d58ff6cd  debian/blobs/usr/share/elasticsearch/plugins/ltr/NOTICE.txt
 489b8151c2a3773c77b597069718bcb9b00878e40eeaea2caaca7c74b2d25935  debian/blobs/usr/share/elasticsearch/plugins/ltr/RankyMcRankFace-0.1.1.jar
