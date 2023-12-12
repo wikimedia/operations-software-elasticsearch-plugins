@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-10) bullseye; urgency=medium
+
+  * Accept document as script.source in addition to script.params.source (deprecated)
+
+ -- Peter <pfischer@wikimedia.org> Tue 12 Dec 2023 12:06:30-06:00
+
 wmf-elasticsearch-search-plugins (7.10.2-9) bullseye; urgency=medium
 
   * Add max_size parameter to extra plugin's super_detect_noop set handler
