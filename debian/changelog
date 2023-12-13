@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-11) bullseye; urgency=medium
+
+  * Fix duplicate jar issue that is crashing Elasticsearch
+
+ -- Brian King <bking@wikimedia.org>  Tue, 31 May 2022 13:25:28 -0600
+
 wmf-elasticsearch-search-plugins (7.10.2-10) bullseye; urgency=medium
 
   * Accept document as script.source in addition to script.params.source (deprecated)
