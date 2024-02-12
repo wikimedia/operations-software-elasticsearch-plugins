@@ -1,3 +1,9 @@
+wmf-elasticsearch-search-plugins (7.10.2-11ubuntu1) bullseye; urgency=medium
+
+  * Update extra plugin to wmf12
+
+ -- Erik <ebernhardson@ebernhardson-ThinkPad-X1-Carbon-7th>  Mon, 12 Feb 2024 12:28:43 -0800
+
 wmf-elasticsearch-search-plugins (7.10.2-11) bullseye; urgency=medium
 
   * Fix duplicate jar issue that is crashing Elasticsearch
