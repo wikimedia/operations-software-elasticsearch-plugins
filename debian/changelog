@@ -1,4 +1,4 @@
-wmf-elasticsearch-search-plugins (7.10.2-11ubuntu1) bullseye; urgency=medium
+wmf-elasticsearch-search-plugins (7.10.2-12) bullseye; urgency=medium
 
   * Update extra plugin to wmf12
 
